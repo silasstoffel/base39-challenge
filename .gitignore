@@ -1,0 +1,15 @@
+# VS Code
+.vscode
+.volumes
+
+# Auto-generated
+node_modules
+coverage
+build
+package-lock.json
+
+# Environment
+.env
+
+# MISC
+.DS_Store

@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+
+    database:
+        image: mongo
+        container_name: 'base39-db'
+        ports:
+            - '27017:27017'
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=base39
+            - MONGO_INITDB_ROOT_PASSWORD=base39
+            - MONGO_INITDB_DATABASE=base39
+
+        volumes:
+            - ./.volumes/mongo:/data/db
+        networks:
+            - default
+
+    mongo-express:
+        image: mongo-express
+        ports:
+         - '8081:8081'
+        environment:
+          ME_CONFIG_BASICAUTH_USERNAME: base39
+          ME_CONFIG_BASICAUTH_PASSWORD: base39
+          ME_CONFIG_MONGODB_PORT: 27017
+          ME_CONFIG_MONGODB_ADMINUSERNAME: base39
+          ME_CONFIG_MONGODB_ADMINPASSWORD: base39
+          ME_CONFIG_MONGODB_SERVER: database
+        networks:
+            - default
+        depends_on:
+            - database
