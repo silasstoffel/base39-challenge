@@ -2,7 +2,6 @@
 [![Package][Express-image]][Express-url]
 [![Technology][node-image]][node-url]
 [![Technology][typescript-image]][typescript-url]
-<!--[![Package][Swagger-image]][Swagger-url]-->
 [![Technology][Docker-image]][Docker-url]
 [![Technology][Mongo-image]][Mongo-url]
 
@@ -16,15 +15,11 @@
 [typescript-url]: https://www.typescriptlang.org
 [typescript-image]: https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=TypeScript&logoColor=white
 
-[Swagger-url]: https://swagger.io/
-[Swagger-image]: https://img.shields.io/badge/Swagger-green?style=for-the-badge&logo=Swagger&logoColor=black
-
 [Docker-url]: https://www.docker.com//
 [Docker-image]: https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=Docker&logoColor=white
 
 [Mongo-url]: https://www.mongodb.com/
 [Mongo-image]: https://img.shields.io/badge/Mongo-green?style=for-the-badge&logo=MongoDb&logoColor=green&color=black
-
 
 Backend technical challenge from Base39.
 
