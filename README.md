@@ -59,3 +59,4 @@ This challenge was solved using some principles and techniques such as:
 - Object Calisthenics
 - Repositories
 - Test
+- Github Workflows (Build, Test, SonarCloud for code analysis and test coverage)
