@@ -1,4 +1,4 @@
-import mongoose, { model, Schema, connection } from 'mongoose';
+import { model, Schema } from 'mongoose';
 
 export interface IMenu {
     _id?: string,
@@ -9,7 +9,7 @@ export interface IMenu {
 
 interface IAutoIncrement {
     _id: string,
-    seq: Number
+    seq: number
 }
 
 // Mongo does not support auto increment, this is way to work with auto increment

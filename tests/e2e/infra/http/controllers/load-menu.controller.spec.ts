@@ -1,9 +1,6 @@
 import request from 'supertest';
 import menuModel from '../../../../../src/infra/database/repositories/menu.schema';
 import { app } from '../../../../../src/infra/http/app';
-import { MenuItem } from '../../../../../src/presenter/menu.presenter';
-
-
 
 describe("LoadMenuController", () => {
 

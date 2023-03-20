@@ -3,7 +3,7 @@ import { Menu } from '../domain/menu/menu.entity';
 export interface MenuItem {
     id: string;
     name: string;
-    submenus?: MenuItem[] | undefined;
+    submenus?: MenuItem[];
 }
 
 export class MenuPresenter {

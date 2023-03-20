@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
-import { MenuPresenter } from '../../../presenter/menu.presenter';
 import { DeleteMenuUseCase } from '../../../use-cases/menu/delete-menu.use-case';
 import { MenuResponseException } from './menu-response.exceptions';
 
@@ -9,7 +8,7 @@ export class DeleteMenuController {
     const useCase = container.resolve(DeleteMenuUseCase);
     const { id } = req.params;
     try {
-        const menus = await useCase.execute(id);
+        await useCase.execute(id);
         return res.status(200).json();
     } catch (error: unknown) {
         return MenuResponseException.resolve(res, error);
