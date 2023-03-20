@@ -37,8 +37,8 @@ describe("CreateMenuController", () => {
         describe("when menu name is duplicated", () => {
             it('should return response with details', async() => {
                 const name = 'first-menu-test';
-                let response = await createMenu(name);
-                response = await createMenu(name);
+                await createMenu(name);
+                const response = await createMenu(name);
 
                 expect(response.status).toBe(409);
                 expect(response.body).toHaveProperty('code', 'MENU_ALREADY_EXISTS');

@@ -1,5 +1,4 @@
 import { injectable, inject } from 'tsyringe';
-import { InvalidRelatedMenuException, MenuAlreadyExistsException } from '../../domain/menu/menu.exception';
 import { Menu } from '../../domain/menu/menu.entity';
 import { MenuRepositoryInterface } from '../../domain/menu/menu.repository.interface';
 
