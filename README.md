@@ -36,8 +36,9 @@ Backend technical challenge from Base39.
 $ sh ./scripts/dev.sh
 ```
 Manual setup:
-    - Create .env (use .env.example as example)
-    - `npm run start`
+
+- Create .env file (use .env.example as example)
+- `npm run start`
 
 ## Tests
 
