@@ -68,6 +68,7 @@ This challenge was solved using some principles and techniques such as:
 ### Create Menu
 
 POST: /api/v1/menu
+
 Body:
 
 ```json
@@ -85,8 +86,11 @@ Responses:
 ```
 
 400 - Validation errors
+
 409 - Menu Already exists
+
 422 - Invalid related menu
+
 ```json
 { "code": "XXX", "message": "YYY" }
 ```
@@ -96,6 +100,7 @@ Responses:
 GET: /api/v1/menu
 
 Response:
+
 200 - Completed menu
 
 ```json
@@ -119,5 +124,7 @@ Response:
 GET: /api/v1/menu/:menu_id
 
 Response:
+
 200 - Delete menu
+
 404 - Menu not found
