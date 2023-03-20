@@ -61,3 +61,63 @@ This challenge was solved using some principles and techniques such as:
 - Repositories
 - Test
 - Github Workflows (Build, Test, SonarCloud for code analysis and test coverage)
+
+
+## API Docs
+
+### Create Menu
+
+POST: /api/v1/menu
+Body:
+
+```json
+{
+	"name": "Menu",
+	"relatedId": "parent menu (optional value)"
+}
+```
+
+Responses:
+
+200 - Created
+```json
+{ "id": "Menu" }
+```
+
+400 - Validation errors
+409 - Menu Already exists
+422 - Invalid related menu
+```json
+{ "code": "XXX", "message": "YYY" }
+```
+
+### Load Menu
+
+GET: /api/v1/menu
+
+Response:
+200 - Completed menu
+
+```json
+[
+    {
+        "id": "10",
+        "name": "Category",
+        "submenus": [
+            {
+                "id": "11",
+                "name": "Subcategory",
+                "submenus": []
+            }
+        ]
+    }
+]
+```
+
+### Delete Menu
+
+GET: /api/v1/menu/:menu_id
+
+Response:
+200 - Delete menu
+404 - Menu not found
