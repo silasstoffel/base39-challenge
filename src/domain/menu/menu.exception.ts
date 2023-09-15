@@ -28,8 +28,10 @@ export class MenuNotException extends Error {
 export class MenuRequiredParameterException extends Error {
     public readonly name = 'MenuRequiredParameterException';
     public readonly code = 'MENU_REQUIRED_PARAMETER_FORCING';
-
+    
     constructor() {
         super('Parameter name is required.');
     }
 }
+
+// testing commit
